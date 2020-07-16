@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h2>Employees Details:</h2>
+    <p>Name: {{office_details.name}}</p>
+    <p>Employee ID: {{office_details.empid}}</p>
+    <p>Department: {{office_details.dept}}</p>
+    <p>mobile No: {{office_details.mobile}}</p>
+    <p>Address : {{office_details.address}}</p>
+
+
+
+  </div>
+<div class="container">
+  <p> <a class='btn btn-warning' href="{% url 'basic_app:update' pk=office_details.pk %}">Update</a>   </p>
+  <p> <a class='btn btn-danger' href="{% url 'basic_app:delete' pk=office_details.pk %}">Delete</a>   </p>
+</div>
+
+
+{% endblock %}
